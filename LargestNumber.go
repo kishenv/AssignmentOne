@@ -12,6 +12,8 @@ var (
 	userInput  string
 )
 
+// largestNumGenerator
+// Function to generate the largest number from the inputs provided by user.
 func largestNumGenerator(numArray []string) string {
 	for i := 0; i < len(numArray); i++ {
 		for j := i + 1; j < len(numArray); j++ {
@@ -30,7 +32,7 @@ func largestNumGenerator(numArray []string) string {
 		return ""
 	}
 	if val == 0 {
-		return "0"
+		return "0" // Corner case where the inputs provided is a series of 0s.
 	} else {
 		return largestNum
 	}
